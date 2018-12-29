@@ -1,0 +1,21 @@
+- name: Add desired groups first
+  group: 
+    name: "{{ item }}"
+    state: present
+  # loop: "{{ groups }}"
+  # Can't get this to work with vars...
+  loop:
+    - wheel
+    - sudo
+    - docker
+    - kvm
+    - lxd
+
+- name: Adding ryan user
+  user:
+    name: ryan
+    comment: Ryan
+    shell: /bin/bash
+    groups: wheel,sudo,docker,lxd,docker,kvm
+    append: yes
+

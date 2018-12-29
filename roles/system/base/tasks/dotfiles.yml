@@ -1,0 +1,8 @@
+- name: Pull down dotfiles repo
+  become_user: ryan
+  git:
+    repo: 'https://github.com/himmAllRight/dotfiles.git'
+    dest: /home/ryan/dotfiles
+    clone: yes
+    update: no
+    recursive: no

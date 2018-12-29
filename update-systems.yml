@@ -1,0 +1,28 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Update Ubuntu Machines
+      when: ansible_os_family == 'Debian'
+      apt:
+        upgrade: yes
+        update_cache: yes
+      tags:
+        - ubuntu
+
+    - name: Update Fedora Machines
+      when: ansible_distribution == 'Fedora'
+      dnf:
+        name: "*"
+        state: latest
+      tags:
+        - fedora
+
+    - name: Update Centos Machines
+      when: ansible_distribution == 'CentOS'
+      yum:
+        name: '*'
+        state: latest
+      tags:
+        - centos

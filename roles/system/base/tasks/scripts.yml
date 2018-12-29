@@ -1,0 +1,12 @@
+- name: Ensure Documents dir exists [for scripts subdir]
+  become_user: ryan
+  file:
+    path: /home/ryan/Documents
+    state: directory
+
+- name: Pull down scripts repo
+  become_user: ryan
+  git:
+    repo: 'https://github.com/himmAllRight/scripts.git'
+    dest: /home/ryan/Documents/scripts
+    clone: yes

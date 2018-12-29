@@ -1,0 +1,17 @@
+---
+# Import common tasks
+# - import_tasks : configure_packages.yml
+#   when: ansible_distribution == "Ubuntu"
+#   tags:
+#     - install_packages
+- import_tasks : user-management.yml
+  tags:
+    - add_user
+- import_tasks : dotfiles.yml
+  ignore_errors: yes
+  tags:
+    - dotfiles
+- import_tasks : scripts.yml
+  ignore_errors: yes
+  tags:
+    - scripts

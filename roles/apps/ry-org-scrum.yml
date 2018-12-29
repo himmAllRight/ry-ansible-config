@@ -1,0 +1,15 @@
+- name: Ensure Builds dir exists
+  become_user: ryan
+  file:
+    path: /home/ryan/Builds
+    state: directory
+
+
+- name: Pull down dotfiles repo
+  become_user: ryan
+  git:
+    repo: 'https://github.com/himmAllRight/ry-org-scrum.git'
+    dest: /home/ryan/Builds/ry-org-scrum
+    clone: yes
+    update: no
+    recursive: no

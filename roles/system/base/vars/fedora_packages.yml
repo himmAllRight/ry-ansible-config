@@ -1,0 +1,23 @@
+---
+add_list:
+  - emacs
+  - vim
+  - htop
+  - pithos
+  - git
+  - stow
+  - tmux
+  - screenfetch
+  - snapd
+  - pass
+  - weechat
+  - golang
+  - vagrant
+  - qemu
+  - libvirt
+  - libvirt-devel
+  - ruby-devel
+  - gcc
+remove_list:
+  - gedit
+  - kate

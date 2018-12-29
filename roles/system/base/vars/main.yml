@@ -1,0 +1,30 @@
+---
+groups:
+  - wheel
+  - docker
+  - kvm
+  - qemu
+  - lxd
+  - libvirt
+
+# add_list:
+#   - emacs
+#   - vim
+#   - htop
+#   - git
+#   - stow
+#   - tmux
+#   - screenfetch
+#   - snapd
+#   - pass
+#   - weechat
+#   - golang
+#   - vagrant
+#   - qemu
+#   - libvirt
+#   - libvirt-devel
+#   - ruby-devel
+#   - gcc
+# - import_vars: fedora_packages.yml
+#   when: ansible_distribution == "Fedora"
+

@@ -1,0 +1,38 @@
+---
+add_list:
+  # Core
+  - fish
+#  - git
+  - htop
+  - ncdu
+  - pass
+  - passmenu
+  - screenfetch
+  - stow
+  - tmux
+  - vim
+  - zsh
+
+  # Dev
+  - python3
+  - python2-flake8
+  - python3-flake8
+  - golang
+  - ruby-devel
+#  - gcc
+
+  # Virt
+#  - '@vagrant'
+#  - '@virtualization'
+  - libvirt-devel
+  - qemu
+
+  # Looks
+  - mozilla-fira-mono-fonts
+
+  # Media
+
+  # System
+  - ansible
+  - ansible-python3
+  - gnome-tweaks

@@ -1,0 +1,8 @@
+---
+- name: Set up Ryan's Fedora Workstation Configuration
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+
+  roles:
+    - system/fedora-silverblue

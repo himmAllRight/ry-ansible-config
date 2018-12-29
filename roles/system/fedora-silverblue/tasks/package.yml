@@ -1,0 +1,7 @@
+---
+- include_vars: fedora_packages.yml
+
+- name: Install rpm-ostree  Package List
+  command: rpm-ostree install --allow-inactive --idempotent {{ item }}
+  loop: "{{ add_list }}"
+  register: install_result

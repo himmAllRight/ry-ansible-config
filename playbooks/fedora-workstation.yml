@@ -6,3 +6,8 @@
 
   roles:
     - system/fedora-workstation
+    - system/base
+    - apps/dotfiles
+    - apps/scripts
+    - apps/ry-org-scrum
+    - apps/website

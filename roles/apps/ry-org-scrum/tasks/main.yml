@@ -5,7 +5,7 @@
     state: directory
 
 
-- name: Pull down dotfiles repo
+- name: Pull down ry-org-scrum repo
   become_user: ryan
   git:
     repo: 'https://github.com/himmAllRight/ry-org-scrum.git'

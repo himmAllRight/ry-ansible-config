@@ -27,6 +27,8 @@ add_list:
   - libvirt
   - libvirt-devel
   - qemu
+  - podman
+  - buildah
 
   # Looks
   - mozilla-fira-mono-fonts

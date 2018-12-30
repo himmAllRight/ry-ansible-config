@@ -1,0 +1,20 @@
+- name: Ensure theme dir exists
+  become_user: ryan
+  file:
+    path: /home/ryan/.themes
+    state: directory
+
+- name: Download and Unzip Gnome Theme
+  become_user: ryan
+  unarchive:
+      src: https://github.com/EliverLara/Sweet/archive/mars.zip
+    #  src: ~/.themes/Sweet-mars.zip
+      dest: ~/.themes/
+      remote_src: yes
+
+- name: Set Gnome Theme
+  become_user: ryan
+  command: "{{ item }}"
+  with_items:
+      - gsettings set org.gnome.desktop.interface gtk-theme Sweet-mars
+      - gsettings set org.gnome.desktop.wm.preferences theme Sweet-mars

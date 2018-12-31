@@ -30,7 +30,8 @@ add_list:
   # Looks
   - mozilla-fira-mono-fonts
 
-  # Media
+  # Web
+  - chromium
 
   # System
   - ansible

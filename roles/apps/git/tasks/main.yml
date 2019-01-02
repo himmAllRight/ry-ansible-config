@@ -1,4 +1,5 @@
 - name: Set global git username
+  become_user: ryan
   git_config:
     name: user.name
     scope: global
@@ -7,8 +8,17 @@
 
 
 - name: Set global git email
+  become_user: ryan
   git_config:
     name: user.email
     scope: global
     value: "{{ git_email }}"
   when: git_email is defined
+
+- name: Set global git editor
+  become_user: ryan
+  git_config:
+    name: core.editor
+    scope: global
+    value: "{{ git_editor }}"
+  when: git_editor is defined

@@ -47,13 +47,43 @@ ansible-playbook playbooks/configure-gnome.yml
       - [ ] Ubuntu Server?
       - [ ] Ubuntu Cloud
     - Desktop Environments
-      - [ ] Gnome *(started)*
+      - [ ] Gnome
+        - [X] Download/Set Theme
+        - [X] Download/Set Icons
+        - [ ] Gnome Tweaks Switches
+          - [ ] Enable Gnome Extensions (if tweaks installed?)
+            - [ ] Enable User Shell Themes/Switch theme
+            - [ ] Install Topicons Plus
+            - [ ] Sound input & output device chooser
+            - [ ] Media Player indicator
+            - [ ] ... other?
+          - [ ] Caps to CTRL
+          - [ ] Turn on Battery Percentage in Top Bar
+          - [ ] Turn on Date in Top Bar
+          - [ ] Switch on Minimize and Maximize buttons
+        - [ ] Set Keyboard shortcuts
       - [ ] Plasma
+        - [ ] Download/Switch Theme
+        - [ ] Download/Switch Icons
+        - [ ] Switch Keyboard commands
+        - [ ] Add keyboard launch commands for passmenu and terminal
       - [ ] Mate
+        - [ ] Download/Switch Theme
+        - [ ] Download/Switch Icons
+        - [ ] Switch Keyboard commands
+        - [ ] Add keyboard launch commands for passmenu and terminal
   - Apps
     - [X] Dotfiles
     - [X] ry-org-scrum
     - [X] scripts
     - [X] Website
     - [ ] Pass
+    - [ ] ssh
+      - [ ] Add keys to Github? (after config added)
+      - [ ] Add other ssh keys
+      - [ ] Configure yubikey access
     - [ ] ...More to add...
+  - Role Improvements
+    - [ ] Add configuration settings
+    - [ ] Swap out hard-coded user
+    - [ ] Conditionalize options with tag/flags

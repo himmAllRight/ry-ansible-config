@@ -2,12 +2,16 @@
 
 - include_vars: flathub_apps.yml
 
-- name: Add the flathub flatpak repository remote to the user installation
-  flatpak_remote:
-    name: flathub
-    state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+# - name: Add the flathub flatpak repository remote to the user installation
+#   flatpak_remote:
+#     name: flathub
+#    state: present
+#    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
 
+# The flatpack modules seem broken right now (sometimes)
+- name: Enable Flathub repository
+  become: yes
+  command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # The flatpak module wasn't working for me... will replace this with it in the
 # future when I know it works for me

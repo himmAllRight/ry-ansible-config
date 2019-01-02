@@ -1,0 +1,17 @@
+- name: Show Weekday in Top Bar
+  become_user: ryan
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "true"
+    state: present
+
+- name: Show Battery Percentage in Top Bar
+  become_user: ryan
+  dconf:
+    key: "/org/gnome/desktop/interface/show-battery-percentage"
+    value: "true"
+    state: present
+
+- name: Set minimize, maximize, close buttons
+  become_user: ryan
+  command: "gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:close,minimize,maximize'"

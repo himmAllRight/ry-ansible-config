@@ -58,9 +58,9 @@ ansible-playbook playbooks/configure-gnome.yml
             - [ ] Media Player indicator
             - [ ] ... other?
           - [ ] Caps to CTRL
-          - [ ] Turn on Battery Percentage in Top Bar
-          - [ ] Turn on Date in Top Bar
-          - [ ] Switch on Minimize and Maximize buttons
+          - [X] Turn on Battery Percentage in Top Bar
+          - [X] Turn on Date in Top Bar
+          - [X] Switch on Minimize and Maximize buttons
         - [ ] Set Keyboard shortcuts
       - [ ] Plasma
         - [ ] Download/Switch Theme

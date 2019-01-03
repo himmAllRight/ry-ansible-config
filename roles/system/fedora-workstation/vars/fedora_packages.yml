@@ -29,6 +29,8 @@ add_list:
   - qemu
   - podman
   - buildah
+  - docker
+  - docker-compose
 
   # Looks
   - mozilla-fira-mono-fonts

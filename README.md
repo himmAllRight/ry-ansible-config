@@ -68,7 +68,8 @@ ansible-playbook playbooks/configure-gnome.yml
         - [X] Configure Nautilus
           - [X] Folders first
           - [X] Standard Icon Size
-        - [ ] Set Keyboard shortcuts
+        - [X] Set Keyboard shortcuts
+        - [ ] Set Custom Keyboard shortcuts
       - [ ] Plasma
         - [ ] Download/Switch Theme
         - [ ] Download/Switch Icons

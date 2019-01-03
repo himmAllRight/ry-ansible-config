@@ -82,8 +82,8 @@ ansible-playbook playbooks/configure-gnome.yml
     - [X] Website
     - [-] Pass
     - [-] Git
-    - [ ] ssh
     - [X] zsh
+    - [ ] ssh
       - [ ] Add keys to Github? (after config added)
       - [ ] Add other ssh keys
       - [ ] Configure yubikey access

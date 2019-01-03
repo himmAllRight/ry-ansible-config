@@ -19,6 +19,9 @@ Right now, there are a few pre-reqs that must be completed before being able to
 run the playbooks.
 
 - Ansible Installed (also python installed)
+- `python3-devel` installed?
+- `psutil` python module installed for python version being used (I had to run
+  `python3.7 -m pip install psutil --user` since that's the python on my system)
 - `/etc/ansible/hosts` configured
 - User needs sudo privileges without password
 - Localhost ssh-keys configured (I think?)
@@ -77,8 +80,10 @@ ansible-playbook playbooks/configure-gnome.yml
     - [X] ry-org-scrum
     - [X] scripts
     - [X] Website
-    - [ ] Pass
+    - [-] Pass
+    - [-] Git
     - [ ] ssh
+    - [X] zsh
       - [ ] Add keys to Github? (after config added)
       - [ ] Add other ssh keys
       - [ ] Configure yubikey access

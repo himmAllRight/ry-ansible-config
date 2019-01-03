@@ -1,0 +1,8 @@
+- name: Pull down oh-my-zsh
+  become_user: ryan
+  git:
+    repo: 'https://github.com/robbyrussell/oh-my-zsh.git'
+    dest: /home/ryan/.oh-my-zsh
+    clone: yes
+    update: no
+    recursive: no

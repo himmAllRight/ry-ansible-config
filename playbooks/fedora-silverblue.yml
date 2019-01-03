@@ -7,7 +7,9 @@
   roles:
     - system/fedora-silverblue
     - system/base
+    - apps/git
     - apps/dotfiles
+    - apps/zsh
     - apps/scripts
     - apps/ry-org-scrum
     - apps/website

@@ -1,3 +1,4 @@
+## Keyboard and Shortcuts
 - name: Switch CAPs Lock to an additional CTRL
   become_user: ryan
   dconf:
@@ -5,6 +6,7 @@
     value: "['caps:ctrl_modifier']"
     state: present
 
+## Top Bar
 - name: Show Weekday in Top Bar
   become_user: ryan
   dconf:
@@ -16,6 +18,14 @@
   become_user: ryan
   dconf:
     key: "/org/gnome/desktop/interface/show-battery-percentage"
+    value: "true"
+    state: present
+
+## Windows
+- name: Resize with secondary click (and supper)
+  become_user: ryan
+  dconf:
+    key: "/org/gnome/desktop/wm/preferences/resize-with-right-button"
     value: "true"
     state: present
 

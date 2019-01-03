@@ -60,7 +60,8 @@ ansible-playbook playbooks/configure-gnome.yml
             - [ ] Sound input & output device chooser
             - [ ] Media Player indicator
             - [ ] ... other?
-          - [ ] Caps to CTRL
+          - [X] Caps to CTRL
+          - [X] Resize windows with Super + Right Click
           - [X] Turn on Battery Percentage in Top Bar
           - [X] Turn on Date in Top Bar
           - [X] Switch on Minimize and Maximize buttons

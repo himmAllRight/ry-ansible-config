@@ -1,10 +1,10 @@
-- name: Set global git username
+- name: Set global git name
   become_user: ryan
   git_config:
     name: user.name
     scope: global
-    value: "{{ git_user }}"
-  when: git_user is defined
+    value: "{{ git_name }}"
+  when: git_name is defined
 
 
 - name: Set global git email

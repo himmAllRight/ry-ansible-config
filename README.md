@@ -59,12 +59,15 @@ ansible-playbook playbooks/configure-gnome.yml
             - [ ] Install Topicons Plus
             - [ ] Sound input & output device chooser
             - [ ] Media Player indicator
-            - [ ] ... other?
-          - [X] Caps to CTRL
+                        - [ ] ... other?
+            - [X] Caps to CTRL
           - [X] Resize windows with Super + Right Click
           - [X] Turn on Battery Percentage in Top Bar
           - [X] Turn on Date in Top Bar
           - [X] Switch on Minimize and Maximize buttons
+        - [X] Configure Nautilus
+          - [X] Folders first
+          - [X] Standard Icon Size
         - [ ] Set Keyboard shortcuts
       - [ ] Plasma
         - [ ] Download/Switch Theme

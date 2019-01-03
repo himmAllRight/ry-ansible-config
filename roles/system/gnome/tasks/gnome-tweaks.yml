@@ -1,3 +1,10 @@
+- name: Switch CAPs Lock to an additional CTRL
+  become_user: ryan
+  dconf:
+    key: "/org/gnome/desktop/input-sources/xkb-options"
+    value: "['caps:ctrl_modifier']"
+    state: present
+
 - name: Show Weekday in Top Bar
   become_user: ryan
   dconf:

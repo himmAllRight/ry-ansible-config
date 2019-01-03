@@ -1,0 +1,11 @@
+- name: Sort Directories First
+  become_user: ryan
+  dconf:
+    key: "/org/gtk/settings/file-chooser/sort-directories-first"
+    value: "true"
+    state: present
+
+- name: Resize Icons
+  become_user: ryan
+  command: "gsettings set org.gnome.nautilus.icon-view default-zoom-level standard"
+

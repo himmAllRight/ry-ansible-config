@@ -1,0 +1,7 @@
+- name: Install Desired Extensions
+  become_user: ryan
+  dconf:
+    key: "/org/gnome/shell/enabled-extensions"
+    value: "['background-logo@fedorahosted.org', 'dash-to-dock@micxgx.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'mediaplayer@patapon.info', 'caffeine@patapon.info', 'TopIcons@phocean.net', 'sound-output-device-chooser@kgshank.net']
+"
+    state: present

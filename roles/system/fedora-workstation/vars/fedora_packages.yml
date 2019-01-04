@@ -36,7 +36,8 @@ add_list:
   - mozilla-fira-mono-fonts
 
   # Media
-  - vlc # mostly just for codecs
+  - vlc # mostly just for media codecs and other goodies
+  - cava
 
   # System
   - ansible

@@ -50,7 +50,7 @@ ansible-playbook playbooks/configure-gnome.yml
       - [ ] Ubuntu Server?
       - [ ] Ubuntu Cloud
     - Desktop Environments
-      - [ ] Gnome
+      - [X] Gnome
         - [X] Download/Set Theme
         - [X] Download/Set Icons
         - [ ] Gnome Tweaks Switches
@@ -97,3 +97,4 @@ ansible-playbook playbooks/configure-gnome.yml
     - [ ] Add configuration settings
     - [ ] Swap out hard-coded user
     - [ ] Conditionalize options with tag/flags
+    - [ ] Continue work on Mazor (after a rename) to link up here

@@ -1,5 +1,5 @@
 - name: Add desired groups first
-  group: 
+  group:
     name: "{{ item }}"
     state: present
   # loop: "{{ groups }}"
@@ -9,6 +9,7 @@
     - sudo
     - docker
     - kvm
+    - libvirt
     - lxd
 
 - name: Adding ryan user
@@ -16,6 +17,6 @@
     name: ryan
     comment: Ryan
     shell: /bin/bash
-    groups: wheel,sudo,docker,lxd,docker,kvm
+    groups: wheel,sudo,docker,lxd,docker,kvm,libvirt
     append: yes
 

@@ -1,0 +1,26 @@
+- name: Ensure theme dir exists
+  become_user: ryan
+  file:
+    path: /home/ryan/.themes
+    state: directory
+
+- name: Ensure icons dir exists
+  become_user: ryan
+  file:
+    path: /home/ryan/.icons
+    state: directory
+
+- name: Download and Unzip Gnome Theme
+  become_user: ryan
+  unarchive:
+    src: https://github.com/EliverLara/Sweet/archive/mars.zip
+    dest: ~/.themes/
+    remote_src: yes
+
+- name: Download and Unzip Icons
+  become_user: ryan
+  unarchive:
+    src: https://github.com/zayronxio/Zafiro-icons/archive/v0.8.zip
+    dest: ~/.icons/
+    remote_src: yes
+

@@ -1,0 +1,5 @@
+---
+- include_tasks: package.yml
+- include_tasks: flathub.yml
+- include_tasks: i3-gaps.yml
+- include_tasks: theme.yml

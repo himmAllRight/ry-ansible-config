@@ -46,6 +46,7 @@ ansible-playbook playbooks/configure-gnome.yml
       - [X] Fedora Workstation
       - [X] Fedora SilverBlue
       - [ ] Fedora Cloud
+      - [ ] Fedora Mate-i3
       - [ ] CentOS Server?
       - [ ] Ubuntu Server?
       - [ ] Ubuntu Cloud
@@ -75,6 +76,12 @@ ansible-playbook playbooks/configure-gnome.yml
         - [ ] Download/Switch Icons
         - [ ] Switch Keyboard commands
         - [ ] Add keyboard launch commands for passmenu and terminal
+      - [/] Mate-i3
+        - [X] Custom package set
+        - [X] Install i3 packages
+        - [/] Build and install i3-gaps
+        - [/] Pull Down and set themes
+        - [ ] Set Mate WM to i3
       - [ ] Mate
         - [ ] Download/Switch Theme
         - [ ] Download/Switch Icons

@@ -1,0 +1,78 @@
+---
+add_list:
+  # Core
+  - fish
+  - git
+  - htop
+  - ncdu
+  - pass
+  - passmenu
+  - screenfetch
+  - stow
+  - tmux
+  - vim
+  - zsh
+
+  # i3-gaps dependencies
+  - libxcb-devel
+  - xcb-util-keysyms-devel
+  - xcb-util-devel
+  - xcb-util-wm-devel
+  - xcb-util-xrm-devel
+  - yajl-devel
+  - libXrandr-devel
+  - startup-notification-devel
+  - libev-devel
+  - xcb-util-cursor-devel
+  - libXinerama-devel
+  - libxkbcommon-devel
+  - libxkbcommon-x11-devel
+  - pcre-devel
+  - pango-devel
+  - automake
+
+  # i3
+  - i3
+  - i3status
+  - i3lock
+  - rofi
+  - sway
+
+  # Dev
+  - python3
+  - python36
+  - npm
+  - python2-flake8
+  - python3-flake8
+  - golang
+  - ruby-devel
+  - gcc
+
+  # Virt
+  - '@vagrant'
+  - '@virtualization'
+  - libvirt
+  - libvirt-devel
+  - qemu
+  - podman
+  - buildah
+  - docker
+  - docker-compose
+
+  # Looks
+  - mozilla-fira-mono-fonts
+
+  # Media
+  - vlc # mostly just for media codecs and other goodies
+  - cava
+
+  # System
+  - ansible
+  - ansible-python3
+  - gnome-tweaks
+  - pavucontrol
+  - smartmontools
+  - snapd
+
+remove_list:
+  - kate

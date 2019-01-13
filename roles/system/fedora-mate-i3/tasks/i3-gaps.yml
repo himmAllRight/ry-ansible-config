@@ -1,0 +1,16 @@
+- name: Ensure Build dir exists
+  become_user: ryan
+  file:
+    path: /home/ryan/Builds
+    state: directory
+
+- name: Pull down i3-gaps repo
+  become_user: ryan
+  git:
+    repo: 'https://github.com/Airblader/i3.git'
+    dest: /home/ryan/Builds/i3-gaps
+    clone: yes
+    update: no
+    recursive: no
+
+# TODO: Compile and Install i3-gaps

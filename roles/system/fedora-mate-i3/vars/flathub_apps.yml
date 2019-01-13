@@ -1,0 +1,16 @@
+---
+flathub_install_list:
+    # System
+    - org.nextcloud.Nextcloud
+    - com.uploadedlobster.peek
+    # Communication
+    - org.quassel_irc.QuasselClient
+    - com.slack.Slack
+    - org.telegram.desktop
+    - com.bluejeans.BlueJeans
+    # Dev
+    - org.gnu.emacs
+    - org.zealdocs.Zeal
+    # Entertainment
+    - com.spotify.Client
+    - io.github.Pithos

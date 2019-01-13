@@ -13,6 +13,9 @@ add_list:
   - vim
   - zsh
 
+  # Mate Desktop
+  - '@Mate Desktop'
+
   # i3-gaps dependencies
   - libxcb-devel
   - xcb-util-keysyms-devel

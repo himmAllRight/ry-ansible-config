@@ -76,12 +76,12 @@ ansible-playbook playbooks/configure-gnome.yml
         - [ ] Download/Switch Icons
         - [ ] Switch Keyboard commands
         - [ ] Add keyboard launch commands for passmenu and terminal
-      - [/] Mate-i3
+      - [X] Mate-i3
         - [X] Custom package set
         - [X] Install i3 packages
         - [X] Build and install i3-gaps
         - [X] Pull Down and set themes
-        - [ ] Set Mate WM to i3
+        - [X] Set Mate WM to i3
       - [ ] Mate
         - [ ] Download/Switch Theme
         - [ ] Download/Switch Icons

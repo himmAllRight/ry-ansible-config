@@ -1,0 +1,7 @@
+- name: Remove filemanager from required components
+  become: ryan
+  command: "gsettings set org.mate.session required-components-list \"['windowmanager', 'panel']\""
+
+- name: Switch Mate WM to i3
+  become: ryan
+  command: "gsettings set org.mate.session.required-components windowmanager 'i3'"

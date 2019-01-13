@@ -35,3 +35,11 @@
 - name: Set Icons
   become_user: ryan
   command: "gsettings set org.mate.interface icon-theme 'Zafiro-icons-0.8'"
+
+- name: Change notification Pop-Up Theme
+  become_user: ryan
+  command: "gsettings set org.mate.NotificationDaemon theme 'coco'"
+
+- name: Change notification Pop-Up to bottom right
+  become_user: ryan
+  command: "gsettings set org.mate.NotificationDaemon popup-location 'bottom_right'"

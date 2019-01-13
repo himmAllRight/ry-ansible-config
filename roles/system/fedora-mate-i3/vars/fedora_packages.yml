@@ -17,6 +17,7 @@ add_list:
   - '@Mate Desktop'
 
   # i3-gaps dependencies
+  - fontawesome-fonts
   - libxcb-devel
   - xcb-util-keysyms-devel
   - xcb-util-devel

@@ -79,8 +79,8 @@ ansible-playbook playbooks/configure-gnome.yml
       - [/] Mate-i3
         - [X] Custom package set
         - [X] Install i3 packages
-        - [/] Build and install i3-gaps
-        - [/] Pull Down and set themes
+        - [X] Build and install i3-gaps
+        - [X] Pull Down and set themes
         - [ ] Set Mate WM to i3
       - [ ] Mate
         - [ ] Download/Switch Theme

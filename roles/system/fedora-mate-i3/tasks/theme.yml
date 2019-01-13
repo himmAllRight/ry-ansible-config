@@ -24,3 +24,14 @@
     dest: ~/.icons/
     remote_src: yes
 
+- name: Set Theme
+  become_user: ryan
+  command: "gsettings set org.mate.interface gtk-theme 'Sweet-Mars'"
+
+- name: Set Window Boarder Theme # Not really neeeded in i3... meh
+  become_user: ryan
+  command: "gsettings set org.mate.Marco.general theme 'Sweet'"
+
+- name: Set Icons
+  become_user: ryan
+  command: "gsettings set org.mate.interface icon-theme 'Zafiro-icons-0.8'"

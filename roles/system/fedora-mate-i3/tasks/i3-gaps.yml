@@ -13,4 +13,32 @@
     update: no
     recursive: no
 
-# TODO: Compile and Install i3-gaps
+- name: Compile i3 Gaps
+  become_user: ryan
+  command: 'autoreconf --force --install'
+  args:
+    chdir: /home/ryan/Builds/i3-gaps
+
+- name: Ensure i3-gaps build dir
+  become_user: ryan
+  file:
+    path: /home/ryan/Builds/i3-gaps/build
+    state: directory
+
+- name: Configure i3-gaps install
+  become_user: ryan
+  command: '../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers'
+  args:
+    chdir: /home/ryan/Builds/i3-gaps/build
+
+- name: make i3-gaps
+  become_user: ryan
+  command: 'make'
+  args:
+    chdir: /home/ryan/Builds/i3-gaps/build
+
+- name: make install i3-gaps
+  become: True
+  command: 'make install'
+  args:
+    chdir: /home/ryan/Builds/i3-gaps/build

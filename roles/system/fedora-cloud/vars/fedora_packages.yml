@@ -25,6 +25,3 @@ add_list:
   # System
   - ansible
   - ansible-python3
-
-remove_list:
-  - kate

@@ -49,5 +49,7 @@ add_list:
   - smartmontools
   - snapd
 
-remove_list:
   - kate
+
+remove_list:
+  - nmon

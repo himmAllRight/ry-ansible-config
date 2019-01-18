@@ -4,12 +4,16 @@
   connection: local
   become: yes
 
+  vars:
+    add_user: "ryan"
+    fedora_version: 29
+
   roles:
     - system/fedora-workstation
-    - system/base
-    - apps/git
-    - apps/dotfiles
-    - apps/zsh
-    - apps/scripts
-    - apps/ry-org-scrum
-    - apps/website
+      #- system/base
+      #- apps/git
+      #- apps/dotfiles
+      #- apps/zsh
+      #- apps/scripts
+      #- apps/ry-org-scrum
+      #- apps/website

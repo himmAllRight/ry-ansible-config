@@ -13,8 +13,9 @@
     - lxd
 
 - name: Adding ryan user
+  when: add_user is defined
   user:
-    name: ryan
+    name: "{{ add_user }}"
     comment: Ryan
     shell: /bin/bash
     groups: wheel,sudo,docker,lxd,docker,kvm,libvirt

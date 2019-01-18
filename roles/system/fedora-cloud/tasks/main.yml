@@ -1,2 +1,2 @@
 ---
-- include_tasks: package.yml
+- include_tasks: ../../fedora-packages/tasks/package.yml

@@ -16,6 +16,9 @@
 # The flatpak module wasn't working for me... will replace this with it in the
 # future when I know it works for me
 - name: Install flathub flatpak apps
+  when: flathub_install_list is defined and flathub_install_list is not none
   become: yes
   command: flatpak install --assumeyes flathub {{ item }}
   loop: "{{ flathub_install_list }}"
+
+  # TODO: Fix loop issue when list is empty

@@ -1,6 +1,6 @@
 ---
-- include_tasks: ../../fedora-packages/tasks/package.yml
-- include_tasks: ../../flathub/tasks/flathub.yml
+- include_tasks: ../../fedora-packages/tasks/main.yml
+- include_tasks: ../../flathub/tasks/main.yml
 - include_tasks: i3-gaps.yml
 - include_tasks: mate.yml
 - include_tasks: theme.yml

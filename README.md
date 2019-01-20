@@ -45,8 +45,8 @@ ansible-playbook playbooks/configure-gnome.yml
     - System Bases
       - [X] Fedora Workstation
       - [X] Fedora SilverBlue
-      - [ ] Fedora Cloud
-      - [ ] Fedora Mate-i3
+      - [\] Fedora Cloud
+      - [X] Fedora Mate-i3
       - [ ] CentOS Server?
       - [ ] Ubuntu Server?
       - [ ] Ubuntu Cloud
@@ -101,7 +101,15 @@ ansible-playbook playbooks/configure-gnome.yml
       - [ ] Configure yubikey access
     - [ ] ...More to add...
   - Role Improvements
-    - [ ] Add configuration settings
-    - [ ] Swap out hard-coded user
-    - [ ] Conditionalize options with tag/flags
+    - [X] Add configuration settings
+    - [X] Swap out hard-coded user
+    - [/] Conditionalize options with tag/flags
     - [ ] Continue work on Mazor (after a rename) to link up here
+  - System
+    - [ ] Setup Jenkins to check Playbooks
+    - [ ] Lint playbooks on new pushes
+    - [ ] Setup Nodes for Testing
+        - [ ] Fedora 29 Workstation
+        - [ ] Fedora 29 Silverblue
+    - [ ] Auto Create/Destroy nodes for testing
+    - [ ] Add testing beyond just making sure playbooks run

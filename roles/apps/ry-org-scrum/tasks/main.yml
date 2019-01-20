@@ -1,15 +1,15 @@
 - name: Ensure Builds dir exists
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/Builds
+    path: "/home/{{ user }}/Builds"
     state: directory
 
 
 - name: Pull down ry-org-scrum repo
-  become_user: ryan
+  become_user: "{{ user }}"
   git:
     repo: 'https://github.com/himmAllRight/ry-org-scrum.git'
-    dest: /home/ryan/Builds/ry-org-scrum
+    dest: "/home/{{ user }}/Builds/ry-org-scrum"
     clone: yes
     update: no
     recursive: no

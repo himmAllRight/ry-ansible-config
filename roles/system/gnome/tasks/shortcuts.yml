@@ -1,6 +1,6 @@
 ## Notification/Status Bars
 - name: Change Close Window Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/shell/keybindings/toggle-message-tray"
     value: "['<Shift><Super>n']"
@@ -8,7 +8,7 @@
 
 ## Windows
 - name: Change Close Window Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/close"
     value: "['<Shift><Super>q']"
@@ -16,56 +16,56 @@
 
 ## Workspaces
 - name: Change Switch to Workspace 1 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-1"
     value: "['<Super>1']"
     state: present
 
 - name: Change Move to Workspace 1 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-1"
     value: "['<Shift><Super>exclam']"
     state: present
 
 - name: Change Switch to Workspace 2 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-2"
     value: "['<Super>2']"
     state: present
 
 - name: Change Move to Workspace 2 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-2"
     value: "['<Shift><Super>at']"
     state: present
 
 - name: Change Switch to Workspace 3 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-3"
     value: "['<Super>3']"
     state: present
 
 - name: Change Move to Workspace 3 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-3"
     value: "['<Shift><Super>numbersign']"
     state: present
 
 - name: Change Switch to Workspace 4 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-4"
     value: "['<Super>4']"
     state: present
 
 - name: Change Move to Workspace 4 Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-4"
     value: "['<Shift><Super>dollar']"
@@ -75,13 +75,13 @@
 
 ## Media
 - name: Switch Volume Up Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up '<Super>period'"
 
 - name: Switch Volume Down Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down '<Super>comma'"
 
 - name: Switch Mute Volume Shortcut
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute '<Shift><Super>m'"

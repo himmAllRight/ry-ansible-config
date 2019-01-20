@@ -1,0 +1,3 @@
+---
+# Note... this assume distribution is actually fedora...
+fedora_version: "{{ ansible_distribution_version }}"

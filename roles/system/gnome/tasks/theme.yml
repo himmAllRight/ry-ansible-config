@@ -1,36 +1,36 @@
 - name: Ensure theme dir exists
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/.themes
+    path: "/home/{{ user }}/.themes"
     state: directory
 
 - name: Ensure icons dir exists
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/.icons
+    path: "/home/{{ user }}/.icons"
     state: directory
 
 - name: Download and Unzip Gnome Theme
-  become_user: ryan
+  become_user: "{{ user }}"
   unarchive:
     src: https://github.com/EliverLara/Sweet/archive/mars.zip
     dest: ~/.themes/
     remote_src: yes
 
 - name: Set Gnome Theme
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "{{ item }}"
   with_items:
       - gsettings set org.gnome.desktop.interface gtk-theme Sweet-mars
       - gsettings set org.gnome.desktop.wm.preferences theme Sweet-mars
 
 - name: Download and Unzip Icons
-  become_user: ryan
+  become_user: "{{ user }}"
   unarchive:
     src: https://github.com/zayronxio/Zafiro-icons/archive/v0.8.zip
     dest: ~/.icons/
     remote_src: yes
 
 - name: Set Icons
-  become_user: ryan
+  become_user: "{{ user }}"
   command: gsettings set org.gnome.desktop.interface icon-theme 'Zafiro-icons-0.8'

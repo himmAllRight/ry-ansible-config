@@ -6,11 +6,10 @@
 
   vars:
     add_user: "ryan"
-    fedora_version: 29
 
   roles:
     - system/fedora-cloud
-    #- system/base
-    #- apps/git
-    #- apps/dotfiles
-    #- apps/zsh
+    - system/base
+    - apps/git
+    - apps/dotfiles
+    - apps/zsh

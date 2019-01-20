@@ -5,15 +5,18 @@
   become: yes
 
   vars:
-    add_user: "ryan"
-    fedora_version: 29
+    add_user: "test"
+    user: "test"
+    git_name: "Ryan Himmelwright"
+    git_email: "ryan.himmelwright@gmail.com"
+    git_editor: "vim"
 
   roles:
     - system/fedora-workstation
-      #- system/base
-      #- apps/git
-      #- apps/dotfiles
-      #- apps/zsh
-      #- apps/scripts
-      #- apps/ry-org-scrum
-      #- apps/website
+    - system/base
+    - apps/git
+    - apps/dotfiles
+    - apps/zsh
+    - apps/scripts
+    - apps/ry-org-scrum
+    - apps/website

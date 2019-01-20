@@ -1,5 +1,5 @@
 # Need to figure out how to enter my password to import it
--name: Import gpg keys
-  become_user: ryan
+- name: Import gpg keys
+  become_user: "{{ user }}"
   command: "gpg2 --import {{ pass_key }}"
   when: pass_key is defined

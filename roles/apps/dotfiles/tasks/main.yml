@@ -1,8 +1,9 @@
 - name: Pull down dotfiles repo
-  become_user: ryan
+  become_user: "{{ user }}"
   git:
     repo: 'https://github.com/himmAllRight/dotfiles.git'
-    dest: /home/ryan/dotfiles
+    dest: "/home/{{ user }}/dotfiles"
     clone: yes
     update: no
     recursive: no
+

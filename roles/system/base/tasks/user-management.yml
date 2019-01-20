@@ -2,22 +2,13 @@
   group:
     name: "{{ item }}"
     state: present
-  # loop: "{{ groups }}"
-  # Can't get this to work with vars...
-  loop:
-    - wheel
-    - sudo
-    - docker
-    - kvm
-    - libvirt
-    - lxd
+  loop: "{{ add_groups }}"
 
-- name: Adding ryan user
+- name: "Adding user {{ add_user }}"
   when: add_user is defined
   user:
     name: "{{ add_user }}"
-    comment: Ryan
     shell: /bin/bash
-    groups: wheel,sudo,docker,lxd,docker,kvm,libvirt
+    groups: "{{ add_user_groups }}"
     append: yes
 

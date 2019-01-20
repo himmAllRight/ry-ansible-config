@@ -1,12 +1,12 @@
 - name: Ensure Documents dir exists [for scripts subdir]
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/Documents
+    path: "/home/{{ user }}/Documents"
     state: directory
 
 - name: Pull down scripts repo
-  become_user: ryan
+  become_user: "{{ user }}"
   git:
     repo: 'https://github.com/himmAllRight/scripts.git'
-    dest: /home/ryan/Documents/scripts
+    dest: "/home/{{ user }}/Documents/scripts"
     clone: yes

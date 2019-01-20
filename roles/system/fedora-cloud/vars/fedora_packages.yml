@@ -4,6 +4,7 @@ add_list:
   - fish
   - git
   - htop
+  - nmon
   - ncdu
   - pass
   - stow

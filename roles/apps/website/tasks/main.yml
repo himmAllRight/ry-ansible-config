@@ -1,20 +1,20 @@
 - name: Ensure Documents dir exists (for website subdirs)
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/Documents
+    path: "/home/{{ user }}/Documents"
     state: directory
 
 - name: Clone website source repo
-  become_user: ryan
+  become_user: "{{ user }}"
   git:
     repo: 'https://github.com/himmAllRight/himmAllRight-source.git'
-    dest: /home/ryan/Documents/himmAllRight-source.git
+    dest: "/home/{{ user }}/Documents/himmAllRight-source.git"
     clone: yes
 
-  
+
 - name: Clone website output repo
-  become_user: ryan
+  become_user: "{{ user }}"
   git:
     repo: 'https://github.com/himmAllRight/himmAllRight.github.io.git'
-    dest: /home/ryan/Documents/himmAllRight.github.io.git
+    dest: "/home/{{ user }}/Documents/himmAllRight.github.io.git"
     clone: yes

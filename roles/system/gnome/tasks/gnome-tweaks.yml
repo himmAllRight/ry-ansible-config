@@ -1,6 +1,6 @@
 ## Keyboard and Shortcuts
 - name: Switch CAPs Lock to an additional CTRL
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/input-sources/xkb-options"
     value: "['caps:ctrl_modifier']"
@@ -8,14 +8,14 @@
 
 ## Top Bar
 - name: Show Weekday in Top Bar
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/interface/clock-show-weekday"
     value: "true"
     state: present
 
 - name: Show Battery Percentage in Top Bar
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/interface/show-battery-percentage"
     value: "true"
@@ -23,13 +23,13 @@
 
 ## Windows
 - name: Resize with secondary click (and supper)
-  become_user: ryan
+  become_user: "{{ user }}"
   dconf:
     key: "/org/gnome/desktop/wm/preferences/resize-with-right-button"
     value: "true"
     state: present
 
 - name: Set minimize, maximize, close buttons
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'"
 

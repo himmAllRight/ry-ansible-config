@@ -1,45 +1,45 @@
 - name: Ensure theme dir exists
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/.themes
+    path: "/home/{{ user }}/.themes"
     state: directory
 
 - name: Ensure icons dir exists
-  become_user: ryan
+  become_user: "{{ user }}"
   file:
-    path: /home/ryan/.icons
+    path: "/home/{{ user }}/.icons"
     state: directory
 
 - name: Download and Unzip Gnome Theme
-  become_user: ryan
+  become_user: "{{ user }}"
   unarchive:
     src: https://github.com/EliverLara/Sweet/archive/mars.zip
     dest: ~/.themes/
     remote_src: yes
 
 - name: Download and Unzip Icons
-  become_user: ryan
+  become_user: "{{ user }}"
   unarchive:
     src: https://github.com/zayronxio/Zafiro-icons/archive/v0.8.zip
     dest: ~/.icons/
     remote_src: yes
 
 - name: Set Theme
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.mate.interface gtk-theme 'Sweet-Mars'"
 
 - name: Set Window Boarder Theme # Not really neeeded in i3... meh
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.mate.Marco.general theme 'Sweet'"
 
 - name: Set Icons
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.mate.interface icon-theme 'Zafiro-icons-0.8'"
 
 - name: Change notification Pop-Up Theme
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.mate.NotificationDaemon theme 'coco'"
 
 - name: Change notification Pop-Up to bottom right
-  become_user: ryan
+  become_user: "{{ user }}"
   command: "gsettings set org.mate.NotificationDaemon popup-location 'bottom_right'"

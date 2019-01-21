@@ -42,6 +42,7 @@ add_list:
   - cava
 
   # System
+  - sudo
   - ansible
   - ansible-python3
   - gnome-tweaks

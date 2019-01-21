@@ -5,12 +5,12 @@ flathub_install_list:
     - com.uploadedlobster.peek
     # Communication
     - org.quassel_irc.QuasselClient
-    - com.slack.Slack
+    #- com.slack.Slack
     - org.telegram.desktop
-    - com.bluejeans.BlueJeans
+    #- com.bluejeans.BlueJeans
     # Dev
     - org.gnu.emacs
     - org.zealdocs.Zeal
     # Entertainment
-    - com.spotify.Client
+    #- com.spotify.Client
     - io.github.Pithos

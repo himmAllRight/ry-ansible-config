@@ -11,6 +11,8 @@
 - name: Enable Flathub repository
   become: yes
   command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  tags:
+    - flatpak
 
 # The flatpak module wasn't working for me... will replace this with it in the
 # future when I know it works for me
@@ -19,5 +21,7 @@
   become: yes
   command: flatpak install --assumeyes flathub {{ item }}
   loop: "{{ flathub_install_list }}"
+  tags:
+    - flatpak
 
   # TODO: Fix loop issue when list is empty

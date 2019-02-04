@@ -71,9 +71,91 @@
     value: "['<Shift><Super>dollar']"
     state: present
 
+- name: Change Switch to Workspace 5 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-5"
+    value: "['<Super>5']"
+    state: present
 
+- name: Change Move to Workspace 5 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-5"
+    value: "['<Shift><Super>percent']"
+    state: present
 
-## Media
+- name: Change Switch to Workspace 6 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-6"
+    value: "['<Super>6']"
+    state: present
+
+- name: Change Move to Workspace 6 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-6"
+    value: "['<Shift><Super>asciicircum']"
+    state: present
+
+- name: Change Switch to Workspace 7 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-7"
+    value: "['<Super>7']"
+    state: present
+
+- name: Change Move to Workspace 7 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-7"
+    value: "['<Shift><Super>ampersand']"
+    state: present
+
+- name: Change Switch to Workspace 8 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-8"
+    value: "['<Super>8']"
+    state: present
+
+- name: Change Move to Workspace 8 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-8"
+    value: "['<Shift><Super>asterisk']"
+    state: present
+
+- name: Change Switch to Workspace 9 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-9"
+    value: "['<Super>9']"
+    state: present
+
+- name: Change Move to Workspace 9 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-9"
+    value: "['<Shift><Super>parenleft']"
+    state: present
+
+- name: Change Switch to Workspace 10 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-10"
+    value: "['<Super>10']"
+    state: present
+
+- name: Change Move to Workspace 10 Shortcut
+  become_user: "{{ user }}"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-10"
+    value: "['<Shift><Super>parenright']"
+    state: present
+
+    ## Media
 - name: Switch Volume Up Shortcut
   become_user: "{{ user }}"
   command: "gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up '<Super>period'"

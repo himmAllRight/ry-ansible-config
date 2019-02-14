@@ -49,7 +49,7 @@ add_list:
   - pavucontrol
   - smartmontools
   - snapd
-
+  - blueman
   - kate
 
 remove_list:

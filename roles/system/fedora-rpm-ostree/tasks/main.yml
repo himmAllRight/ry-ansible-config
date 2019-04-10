@@ -1,0 +1,23 @@
+---
+- name: Get Fedora Version
+  debug:
+    msg: "{{ ansible_distribution }} Version: {{ fedora_version }}"
+
+- include_vars: fedora_packages.yml
+
+- name: Install Fedora Package List with rpm-ostree
+  when: add_list is defined and add_list is not none
+  register: install_result
+  shell: |
+    rpm-ostree install "{{ add_list }}"
+  tags:
+    - rpmostree
+
+#- name: Remove Fedora Package List
+#  when: remove_list is defined and remove_list is not none
+#  dnf:
+#    name: "{{ remove_list }}"
+#    state: absent
+#  register: remove_result
+#  tags:
+#    - dnf

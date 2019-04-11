@@ -15,8 +15,6 @@ add_list:
 
   # Dev
   - python3
-  - python2-flake8
-  - python3-flake8
   - golang
   - ruby-devel
 #  - gcc

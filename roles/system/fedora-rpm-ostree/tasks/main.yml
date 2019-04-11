@@ -5,10 +5,14 @@
 
 - include_vars: fedora_packages.yml
 
+- name: Run rpm-ostree upgrade
+  shell: "rpm-ostree upgrade"
+  tags:
+    - rpmostree
+
 - name: Install Fedora Package List with rpm-ostree
   when: add_list is defined and add_list is not none
-  debug:
-    msg: "install list: {{ add_list | from_yaml }}"
+  shell: "rpm-ostree install --idempotent --allow-inactive {{ add_list | join(' ') }}"
   tags:
     - rpmostree
 

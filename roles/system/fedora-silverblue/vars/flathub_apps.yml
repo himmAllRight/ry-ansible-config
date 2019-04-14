@@ -1,7 +1,7 @@
 ---
 flathub_install_list:
     # System
-    - org.nextcloud.Nextcloud
+    #    - org.nextcloud.Nextcloud
     - com.uploadedlobster.peek
     # Communication
     - org.quassel_irc.QuasselClient

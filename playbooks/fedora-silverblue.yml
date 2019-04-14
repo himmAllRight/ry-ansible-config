@@ -4,12 +4,19 @@
   connection: local
   become: yes
 
+  vars:
+    add_user: "ryan"
+    user: "ryan"
+    git_name: "Ryan Himmelwright"
+    git_email: "ryan.himmelwright@gmail.com"
+    git_editor: "vim"
+
   roles:
     - system/fedora-silverblue
-#    - system/base
-#    - apps/git
-#    - apps/dotfiles
-#    - apps/zsh
+    - system/base
+    - apps/git
+    - apps/dotfiles
+    - apps/zsh
 #    - apps/scripts
 #    - apps/ry-org-scrum
-#    - apps/website
+    - apps/website

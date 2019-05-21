@@ -4,6 +4,13 @@
   connection: local
   become: yes
 
+  vars:
+    add_user: "ryan"
+    user: "ryan"
+    git_name: "Ryan Himmelwright"
+    git_email: "ryan.himmelwright@gmail.com"
+    git_editor: "vim"
+
   roles:
     - system/fedora-mate-i3
     - system/base

@@ -5,8 +5,8 @@
   become: yes
 
   vars:
-    add_user: "test"
-    user: "test"
+    add_user: "ryan"
+    user: "ryan"
     git_name: "Ryan Himmelwright"
     git_email: "ryan.himmelwright@gmail.com"
     git_editor: "vim"

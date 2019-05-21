@@ -14,7 +14,7 @@ add_list:
   - zsh
 
   # Mate Desktop
-  - '@Mate Desktop'
+  #  - '@Mate Desktop'
 
   # i3-gaps dependencies
   - fontawesome-fonts
@@ -46,8 +46,6 @@ add_list:
   - python3
   - python36
   - npm
-  - python2-flake8
-  - python3-flake8
   - golang
   - ruby-devel
   - gcc

@@ -1,8 +1,6 @@
 ---
 add_list:
   # Core
-  - fish
-#  - git
   - htop
   - ncdu
   - pass
@@ -11,29 +9,31 @@ add_list:
   - stow
   - tmux
   - vim
+  - neovim
   - zsh
-
-  # Dev
-  - python3
-  - python2-flake8
-  - python3-flake8
-  - golang
-  - ruby-devel
-#  - gcc
-
-  # Virt
-#  - '@vagrant'
-#  - '@virtualization'
-  - libvirt-devel
-  - qemu
-
-  # Looks
-  - mozilla-fira-mono-fonts
-
-  # Web
-  - chromium
 
   # System
   - ansible
   - ansible-python3
+  - python3
+  - net-tools
+
+  # Virt Group
+  - virt-install
+  - libvirt-daemon-config-network
+  - libvirt-daemon-kvm
+  - qemu-kvm
+  - virt-manager
+  - virt-viewer
+  - guestfs-browser
+  - libguestfs-tools
+  - python3-libguestfs
+  - virt-top
+
+  # Looks
+  - mozilla-fira-mono-fonts
+
+  # Desktop
+  - chromium
   - gnome-tweaks
+  - seafile-client

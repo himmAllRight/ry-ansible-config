@@ -1,5 +1,0 @@
---- # common playbook
-- hosts: localhost
-  become: true
-  roles:
-    - website

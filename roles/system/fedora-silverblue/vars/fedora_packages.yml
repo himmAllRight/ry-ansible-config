@@ -37,3 +37,5 @@ add_list:
   - chromium
   - gnome-tweaks
   - seafile-client
+  - deja-dup
+  - deja-dup-nautilus

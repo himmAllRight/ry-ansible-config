@@ -6,7 +6,7 @@
 - include_vars: fedora_packages.yml
 
 - name: add RPM Fusion repos
-  shell: "sudo rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm"
+  shell: "rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm || true"
   become: true
   tags:
     - rpmfusion

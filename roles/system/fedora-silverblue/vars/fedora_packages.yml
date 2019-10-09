@@ -3,13 +3,12 @@ add_list:
   # Core
   - htop
   - ncdu
-  - pass
-  - passmenu
   - screenfetch
   - stow
   - tmux
   - vim
   - neovim
+  - emacs
   - zsh
 
   # System

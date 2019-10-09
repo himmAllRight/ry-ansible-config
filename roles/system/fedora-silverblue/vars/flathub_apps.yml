@@ -3,6 +3,8 @@ flathub_install_list:
     # System
     - com.uploadedlobster.peek
     - com.bitwarden
+    - com.github.cassidyjames.dippi
+    - com.qutebrowser.qutebrowser
     # Communication
     - org.quassel_irc.QuasselClient
     - com.slack.Slack

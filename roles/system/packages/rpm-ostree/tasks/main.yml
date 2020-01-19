@@ -3,12 +3,13 @@
   debug:
     msg: "{{ ansible_distribution }} Version: {{ fedora_version }}"
 
-- include_vars: fedora_packages.yml
+    #- include_vars: fedora_packages.yml
 
 - name: add RPM Fusion repos
   shell: "rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm || true"
   become: true
   tags:
+    - fedora
     - rpmfusion
     - rpmostree
 
@@ -18,13 +19,13 @@
     - rpmostree
 
 - name: Install Fedora Package List with rpm-ostree
-  when: add_list is defined and add_list is not none
-  shell: "rpm-ostree install --idempotent --allow-inactive {{ add_list | join(' ') }}"
+  when: rpmostree_add_list is defined and rpmostree_add_list is not none
+  shell: "rpm-ostree install --idempotent --allow-inactive {{ rpmostree_add_list | join(' ') }}"
   tags:
     - rpmostree
 
 - name: Remove Fedora Package List
-  when: remove_list is defined and remove_list is not none
-  shell: "rpm-ostree uninstall {{ remove_list | join(' ') }}"
+  when: rpmostree_remove_list is defined and rpmostree_remove_list is not none
+  shell: "rpm-ostree uninstall {{ rpmostree_remove_list | join(' ') }}"
   tags:
     - rpmostree

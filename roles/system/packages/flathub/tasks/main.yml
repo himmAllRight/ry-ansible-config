@@ -1,5 +1,5 @@
 ---
-- include_vars: flathub_apps.yml
+#- include_vars: flathub_apps.yml
 
 # - name: Add the flathub flatpak repository remote to the user installation
 #   flatpak_remote:
@@ -13,6 +13,7 @@
   command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   tags:
     - flatpak
+    - flathub
 
 # The flatpak module wasn't working for me... will replace this with it in the
 # future when I know it works for me
@@ -23,5 +24,6 @@
   loop: "{{ flathub_install_list }}"
   tags:
     - flatpak
+    - flathub
 
   # TODO: Fix loop issue when list is empty

@@ -10,13 +10,19 @@
     git_name: "Ryan Himmelwright"
     git_email: "ryan.himmelwright@gmail.com"
     git_editor: "vim"
+    dnf_add_list:
+      # Core
+      - git
+      - htop
+      - ncdu
+      - stow
+      - tmux
+      - vim
+      - zsh
+      # System
+      - sudo
+      - ansible
+      - ansible-python3
 
   roles:
-    - system/fedora-workstation
-    - system/base
-    - apps/git
-    - apps/dotfiles
-    - apps/zsh
-    - apps/scripts
-    - apps/ry-org-scrum
-    - apps/website
+    - system/packages/dnf

@@ -10,6 +10,7 @@
       - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
       - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
   tags:
+    - fedora
     - rpmfusion
 
 - name: Update dnf packages
@@ -19,19 +20,19 @@
   tags:
     - dnf
 
-- include_vars: fedora_packages.yml
+    #- include_vars: dnf_packages.yml
 
-- name: Install Fedora  Package List
-  when: add_list is defined and add_list is not none
-  dnf: name={{ add_list }}
+- name: Install DNF Package List
+  when: dnf_add_list is defined and dnf_add_list is not none
+  dnf: name={{ dnf_add_list }}
   register: install_result
   tags:
     - dnf
 
-- name: Remove Fedora Package List
-  when: remove_list is defined and remove_list is not none
+- name: Remove DNF Package List
+  when: dnf_remove_list is defined and dnf_remove_list is not none
   dnf:
-    name: "{{ remove_list }}"
+    name: "{{ dnf_remove_list }}"
     state: absent
   register: remove_result
   tags:

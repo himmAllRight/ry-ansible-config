@@ -1,0 +1,16 @@
+---
+
+- name: Update and Install apt Package List
+  when: apt_add_list is defined and apt_add_list is not none
+  apt: pkg= {{ apt_add_list }}
+  tags:
+    - apt
+
+
+- name: Remove apt List
+  when: apt_remove_list is defined and apt_remove_list is not none
+  apt:
+    pkg: "{{ apt_remove_list }}"
+    state: absent
+  tags:
+    - apt

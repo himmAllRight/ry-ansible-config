@@ -1,8 +1,9 @@
 ---
-
-- name: Update and Install apt Package List
+- name: Update and Install APT Package List
   when: apt_add_list is defined and apt_add_list is not none
-  apt: pkg= {{ apt_add_list }}
+  apt:
+    name: "{{ apt_add_list }}"
+    state: present
   tags:
     - apt
 

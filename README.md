@@ -34,6 +34,8 @@ types of package managers.
 |----------|-------------|---------------|
 | dnf_add_list | A list of packages to add using the `dnf` package manager | `system/packages/dnf` |
 | dnf_remove_list | A list of packages to remove using the `dnf` package manager | `system/packages/dnf` |
+| yum_add_list | A list of packages to add using the `yum` package manager | `system/packages/yum` |
+| yum_remove_list | A list of packages to remove using the `yum` package manager | `system/packages/yum` |
 | apt_add_list | A list of packages to add using the `apt` package manager | `system/packages/apt` |
 | apt_remove_list | A list of packages to remove using the `apt` package manager | `system/packages/apt` |
 | rpmostree_add_list | A list of packages to add using `rpmostree` | `system/packages/rpm-ostree` |

@@ -6,14 +6,14 @@
     state: present
   loop: "{{ add_user_groups }}"
 
-- name: "Adding user {{ add_user }} with no groups"
+- name: "Adding user {{ add_user }}"
   when: add_user is defined and add_user_groups is not defined
   user:
     name: "{{ add_user }}"
     shell: /bin/bash
     append: yes
 
-- name: "Adding user {{ add_user }} with groups"
+- name: "Adding groups to user {{ add_user }}"
   when: add_user is defined and add_user_groups is defined and add_user_groups is not none
   user:
     name: "{{ add_user }}"

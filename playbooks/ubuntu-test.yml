@@ -14,7 +14,7 @@
     git_name: "Ryan Himmelwright"
     git_email: "ryan.himmelwright@gmail.com"
     git_editor: "vim"
-    yum_add_list:
+    apt_add_list:
       # Core
       - git
       - htop

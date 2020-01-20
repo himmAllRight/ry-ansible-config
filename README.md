@@ -43,6 +43,16 @@ types of package managers.
 | flathub_install_list | A list of flatpaks to install from flathub | `system/packages/flathub` |
 
 
+### User Management
+The playbooks can add new users and groups. Define these variables, and include
+the `system/user-management` role in a playbook to do so.
+
+| Variable | Description |
+|----------|-------------|
+| add_user | Username and user to add |
+| add_user_groups | Groups that `add_user` will be added to after being
+created. If the group does not exist, it will first be created. |
+
 ## Examples
 
 

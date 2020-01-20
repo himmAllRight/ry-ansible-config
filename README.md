@@ -50,8 +50,7 @@ the `system/user-management` role in a playbook to do so.
 | Variable | Description |
 |----------|-------------|
 | add_user | Username and user to add |
-| add_user_groups | Groups that `add_user` will be added to after being
-created. If the group does not exist, it will first be created. |
+| add_user_groups | Groups that `add_user` will be added to after being created. If the group does not exist, it will first be created. |
 
 ## Examples
 

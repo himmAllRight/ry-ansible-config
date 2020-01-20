@@ -14,7 +14,7 @@
     append: yes
 
 - name: "Adding user {{ add_user }} with groups"
-  when: add_user is defined and add_user_groups is defiend and add_user_groups is not none
+  when: add_user is defined and add_user_groups is defined and add_user_groups is not none
   user:
     name: "{{ add_user }}"
     groups: "{{ add_user_groups }}"

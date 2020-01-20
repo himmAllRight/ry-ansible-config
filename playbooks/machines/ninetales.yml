@@ -1,0 +1,44 @@
+---
+- name: Set up Ninetales
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+
+  vars:
+    add_user: "ryan"
+    add_user_groups:
+      - wheel
+      - sudo
+      - libvirt
+    user: "ryan"
+    git_name: "Ryan Himmelwright"
+    git_email: "ryan.himmelwright@gmail.com"
+    git_editor: "vim"
+    apt_add_list:
+      # Core
+      - git
+      - htop
+      - ncdu
+      - stow
+      - tmux
+      - vim
+      - zsh
+      # Virt
+      - qemu-kvm
+      - libvirt-daemon-system
+      - libvirt-clients
+      - bridge-utils
+
+      # ZFS
+      -  zfsutils-linux
+
+      # System
+      - sudo
+      - ansible
+
+  roles:
+    - system/packages/apt
+    - system/user-management
+    - apps/dotfiles
+    - apps/git
+    - apps/zsh

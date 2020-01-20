@@ -1,5 +1,5 @@
 ---
-- name: Set up Ryan's Fedora Workstation Configuration
+- name: Set up Ryan's ostree Configuration
   hosts: 127.0.0.1
   connection: local
   become: yes

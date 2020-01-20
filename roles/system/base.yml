@@ -1,6 +1,0 @@
---- # common playbook
-- hosts: all
-  become: true
-  roles:
-    - configure_packages
-    - common

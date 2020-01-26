@@ -52,6 +52,19 @@ the `system/user-management` role in a playbook to do so.
 | add_user | Username and user to add |
 | add_user_groups | Groups that `add_user` will be added to after being created. If the group does not exist, it will first be created. |
 
+### Git
+
+The playbooks can configure the git user. To setup `git`, define the following
+variables in the playbook and include he `apps/git` role.
+
+
+| Variable | Description |
+|----------|-------------|
+| git_name | The name for the git account. |
+| git_email | The email for the git account. |
+| git_editor | Sets the default `git` editor. Ex: `vim`, `nano`, or `emacs`. |
+
+
 ## Examples
 
 

@@ -1,5 +1,4 @@
 ---
-- include_tasks: extensions.yml
 - include_tasks: theme.yml
 - include_tasks: gnome-tweaks.yml
 - include_tasks: shortcuts.yml

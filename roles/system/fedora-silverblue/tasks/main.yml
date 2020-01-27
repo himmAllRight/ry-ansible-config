@@ -1,3 +1,0 @@
----
-- include_tasks: ../../fedora-rpm-ostree/tasks/main.yml
-- include_tasks: ../../flathub/tasks/main.yml

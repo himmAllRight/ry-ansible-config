@@ -68,5 +68,10 @@ variables in the playbook and include he `apps/git` role.
 ## Examples
 
 
+## Untested
+
+- `systen/de/mate-i3` has not been tested on a system since the conversion.The
+    tasks *might* be out of date.
+
 ## Future Feature Plans
 

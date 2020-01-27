@@ -1,0 +1,17 @@
+---
+- name: Set up Ryan's ostree Configuration
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+
+  vars:
+    add_user: "ryan"
+    user: "ryan"
+    git_name: "Ryan Himmelwright"
+    git_email: "ryan.himmelwright@gmail.com"
+    git_editor: "vim"
+    rpmostree_remove_list:
+      - ranger
+
+  roles:
+    - system/packages/rpm-ostree

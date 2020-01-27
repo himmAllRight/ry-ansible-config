@@ -1,0 +1,18 @@
+---
+- name: Install YUM Package List
+  when: yum_add_list is defined and yum_add_list is not none
+  yum:
+    name: "{{ yum_add_list }}"
+    state: latest
+  register: install_result
+  tags:
+    - yum
+
+- name: Remove YUM Package List
+  when: yum_remove_list is defined and dnf_remove_list is not none
+  yum:
+    name: "{{ yum_remove_list }}"
+    state: absent
+  register: remove_result
+  tags:
+    - yum

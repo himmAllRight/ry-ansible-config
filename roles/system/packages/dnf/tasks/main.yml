@@ -1,0 +1,39 @@
+---
+- name: Get Fedora Version
+  debug:
+    msg: "{{ ansible_distribution }} Version: {{ fedora_version }}"
+
+- name: add RPM Fusion repos
+  package:
+    state: present
+    name:
+      - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
+      - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
+  tags:
+    - fedora
+    - rpmfusion
+
+- name: Update dnf packages
+  dnf:
+    name: "*"
+    state: latest
+  tags:
+    - dnf
+
+    #- include_vars: dnf_packages.yml
+
+- name: Install DNF Package List
+  when: dnf_add_list is defined and dnf_add_list is not none
+  dnf: name={{ dnf_add_list }}
+  register: install_result
+  tags:
+    - dnf
+
+- name: Remove DNF Package List
+  when: dnf_remove_list is defined and dnf_remove_list is not none
+  dnf:
+    name: "{{ dnf_remove_list }}"
+    state: absent
+  register: remove_result
+  tags:
+    - dnf

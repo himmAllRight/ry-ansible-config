@@ -4,7 +4,7 @@
     name: user.name
     scope: global
     value: "{{ git_name }}"
-  when: git_name is defined
+  when: git_name is defined and git_name is not none
 
 
 - name: Set global git email
@@ -13,7 +13,7 @@
     name: user.email
     scope: global
     value: "{{ git_email }}"
-  when: git_email is defined
+  when: git_email is defined and git_email is not none
 
 - name: Set global git editor
   become_user: "{{ user }}"
@@ -21,4 +21,4 @@
     name: core.editor
     scope: global
     value: "{{ git_editor }}"
-  when: git_editor is defined
+  when: git_editor is defined and git_editor is not none

@@ -1,0 +1,38 @@
+---
+- name: Set up Ryan's Fedora test Configuration
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+
+  vars:
+    add_user: "ryan"
+    add_user_groups:
+      - wheel
+      - libvirt
+    user: "ryan"
+    git_name: "Ryan Himmelwright"
+    git_email: "ryan.himmelwright@gmail.com"
+    git_editor: "vim"
+    dnf_add_list:
+      # Core
+      - git
+      - htop
+      - ncdu
+      - stow
+      - tmux
+      - vim
+      - zsh
+      # System
+      - sudo
+      - ansible
+      - ansible-python3
+
+  roles:
+    - system/packages/dnf
+    - system/user-management
+    - apps/dotfiles
+    - apps/git
+    - apps/ry-org-scrum
+    - apps/scripts
+    - apps/zsh
+    - dev/website

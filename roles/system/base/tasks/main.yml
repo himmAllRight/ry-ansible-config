@@ -1,7 +1,0 @@
----
-- import_tasks : user-management.yml
-  tags:
-    - add_user
-- import_tasks: services.yml
-  tags:
-    - start_services

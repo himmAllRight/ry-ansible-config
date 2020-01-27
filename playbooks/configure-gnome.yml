@@ -1,7 +1,10 @@
 ---
-- name: Set up Ryan's Fedora Workstation Configuration
+- name: Configure some Gnome Desktop Options
   hosts: 127.0.0.1
   connection: local
+  become: yes
 
+  vars:
+    user: "ryan"
   roles:
-    - system/gnome
+    - system/de/gnome

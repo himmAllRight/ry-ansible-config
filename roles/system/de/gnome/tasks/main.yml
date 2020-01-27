@@ -1,0 +1,5 @@
+---
+- include_tasks: theme.yml
+- include_tasks: gnome-tweaks.yml
+- include_tasks: shortcuts.yml
+- include_tasks: nautilus.yml
